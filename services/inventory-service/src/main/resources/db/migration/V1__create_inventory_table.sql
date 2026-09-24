@@ -10,3 +10,13 @@ CREATE TABLE inventory (
     CONSTRAINT chk_reserved_quantity_non_negative
         CHECK (reserved_quantity >= 0)
 );
+
+INSERT INTO inventory (
+    product_id,
+    available_quantity,
+    reserved_quantity
+)
+VALUES
+    (1, 50, 0),
+    (2, 20, 0),
+    (3, 100, 0);
